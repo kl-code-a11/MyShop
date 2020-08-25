@@ -64,7 +64,7 @@ public class MenuView {
 						
 						if(sc.next().equals("y")) {
 							while(user.getMoney()<total) {
-								System.out.println(String.format("亲，您的余额不足，还差￥%f，请问您要充值吗?",total-user.getMoney()));
+								System.out.println(String.format("亲，您的余额不足，还差￥%f，请问您要充值吗?y/n",total-user.getMoney()));
 								if(sc.next().equals("y")) {
 									System.out.println("请输入充值金额:");
 									user.setMoney(user.getMoney()+sc.nextDouble());
@@ -73,7 +73,7 @@ public class MenuView {
 									break;
 								}
 							}
-							System.out.println("确认付款吗?");
+							System.out.println("确认付款吗?yes/no");
 							if(sc.next().equals("y")) {
 							user.setMoney(user.getMoney()-total);
 							ud.updateUser(user);

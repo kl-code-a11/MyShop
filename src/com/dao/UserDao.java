@@ -11,7 +11,7 @@ public interface UserDao {
       
       boolean updateUser(User user);
        
-      User findById(int uid);
+      User findById(int Uid);
 
 
 }

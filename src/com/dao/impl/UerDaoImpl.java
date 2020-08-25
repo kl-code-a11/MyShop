@@ -41,7 +41,7 @@ public class UerDaoImpl extends DBUtil<User> implements UserDao {
 
 	@Override
 	public boolean updateUser(User user) {
-		String sql="update user set password=?,money=?  where id=?";
+		String sql="update user set password=?,money=?  where uid=?";
 		List<Object> list=new ArrayList<>();
 		list.add(user.getPassword());
 		list.add(user.getMoney());
@@ -61,9 +61,9 @@ public class UerDaoImpl extends DBUtil<User> implements UserDao {
 	}
 
 	@Override
-	public User findById(int uid) {
+	public User findById(int Uid) {
 		// TODO 自动生成的方法存根
-		List<User> list=Query("select * from user where id=?",uid);
+		List<User> list=Query("select * from user where uid=?",Uid);
 		if(list.size()>0) {
 			return list.get(0);
 		}

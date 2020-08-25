@@ -23,7 +23,7 @@ public class GoodsTypeDaoImpl extends DBUtil<GoodsType> implements GoodsTypeDao 
 
 	@Override
 	public GoodsType findById(int tid) {
-	List<GoodsType> list=Query("select * from goodsType where tid=?",tid);
+	List<GoodsType> list=Query("select * from goodstype where tid=?",tid);
 	if(list.size()>0) {
 		return list.get(0);
 	}
